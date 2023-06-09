@@ -87,6 +87,14 @@ describe("ordenaCartas", () => {
     ]);
   });
 
+  it ("teste da linha 34", () => {
+      expect(ordenaCartas(dados2, selecaoZ)).toEqual([
+        { name: "C"},
+        { name: "B"},
+        { name: "A"}
+      ]);
+  });
+
   it("ordenou `cartas Z-A`", () => {
     expect(ordenaCartas(dados1, selecaoZ)).toEqual([
       { name: "Ana" },
@@ -114,42 +122,3 @@ it("filtrou  `ArcanosMenores`", () => {
     { name: "Camila", value: 2, type: "minor" },
   ]);
 });
-
-// it("filtrou  `selecione`", () => {
-//   expect(ordenaCartas(dados, selecao)).toEqual();
-// });
-// teste.js
-
-//
-
-// describe("Testes para a função ordenaCartas", () => {
-//   test('Teste com selecao igual a "a-z"', () => {
-//     const dados = [{ name: "C" }, { name: "B" }, { name: "A" }];
-//     const selecao = "a-z";
-
-//     const resultado = ordenaCartas(dados, selecao);
-
-//     // Realize asserções para verificar se o resultado está correto
-//     expect(resultado).toEqual([{ name: "A" }, { name: "B" }, { name: "C" }]);
-//   });
-
-//   test('Teste com selecao igual a "z-a"', () => {
-//     const dados = [{ name: "C" }, { name: "B" }, { name: "A" }];
-//     const selecao = "z-a";
-
-//     const resultado = ordenaCartas(dados, selecao);
-
-//     // Realize asserções para verificar se o resultado está correto
-//     expect(resultado).toEqual([{ name: "C" }, { name: "B" }, { name: "A" }]);
-//   });
-
-//   test('Teste com selecao diferente de "a-z" e "z-a"', () => {
-//     const dados = [{ name: "C" }, { name: "B" }, { name: "A" }];
-//     const selecao = "outra-selecao";
-
-//     const resultado = ordenaCartas(dados, selecao);
-
-//     // Realize asserções para verificar se o resultado está correto
-//     expect(resultado).toEqual();
-//   });
-// });

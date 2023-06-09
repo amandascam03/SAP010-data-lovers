@@ -13,12 +13,18 @@ body {
 header {
     z-index: 2;
     width: 100vw;
-    /* height: 300px; */
-    position: fixed;
-    right: 0%;
     /* foi usado para ficar da largura da tela */
+    position: fixed;
+    top: 0%;
+    /* right: 0%;
     bottom: 93%;
-    padding-top: 10px;
+    padding-top: 10px; */
+}
+
+menu {
+    display: none;
+    /*deixa a lista do menu escondido*/
+
 }
 
 #menuLista {
@@ -34,7 +40,6 @@ header {
 menu>ul>li>a {
     color: #000;
     text-decoration: none;
-    /* margin-bottom: 5px; */
     font-size: 15px;
 }
 
@@ -42,20 +47,9 @@ menu>ul>li>a {
     background: #8FBC8F;
     display: flex;
     cursor: pointer;
-    padding: 20px 0 10px 30px;
+    /* padding: 20px 0 10px 30px; */
+    padding: 10px;
     position: relative;
-    /* height: 4vh; */
-}
-
-
-/* .menuLista{
-    position:relative;
-    z-index: 10;
-} */
-
-
-menu {
-    display: none;
 }
 
 .background {
@@ -64,21 +58,20 @@ menu {
 }
 
 .background::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background-image: url(imagens/cartasEsquerda.jpg);
-	background-size: cover;
-	background-position: center;
-	z-index: -1;
-	opacity: 0.9;
-
-
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(imagens/cartasEsquerdaMenor.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.9;
 }
 
 .textoeinput {
     display: flex;
     justify-content: space-between;
+    /* padding-right: 2%; coloquei para tirar a faixa branca que apareceu na lateral */
 
 }
 
@@ -89,52 +82,68 @@ menu {
 }
 
 #textoT {
-    padding-left: 3em;
+    /* padding-left: 3em; */
+    padding: 0 1% 1% 1%;
     text-indent: 2em;
     display: flex;
     position: relative;
     padding-top: 3em;
     font-weight: bold;
-    /* padding-top: 8em; */
+    text-align: left;
+    width: 73vw;
 }
 
 form {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    width: 180px;
+    /* width: 1rem; */
+    /* width: 180px; */
     position: relative;
-    right: 10%;
+    /* right: 10%; */
     margin-bottom: 20px;
-    /* padding-top: 6em; */
-    /* left: 80%;
-    bottom: 80%; */
+
 }
 
-form>input {
+form>label>input {
+    /*Precisei colocar dessa forma para atingir o input*/
     border: none;
     background-color: #B5C3A6;
-    height: 40px;
-    font-size: 16px;
+    height: 35px;
+    /* font-size: 16px; */
+    font-size: 1rem;
+    margin: 3%;
+    /*separou os inputs, eles estavam colados*/
+    
+}
+#pesquisa-nome{
+    width: 120px;
 }
 
-form>select {
+
+#pesquisa-numero{
+    width: 80px;
+}
+
+
+form>label>select {
     background-color: #B5C3A6;
     height: 40px;
     border: none;
+    font-family: "Poppins";
     font-size: 16px;
+    margin: 2%;
 }
 
 .calculo {
     text-align: center;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1em;
     padding-bottom: 5px;
     text-decoration: underline;
 }
 
 .container-card {
-    /* background-color: #7ac74c; */
     display: flex;
     flex-wrap: wrap;
     /*essa propriedade colocamos no pai para conseguirmos mexer nos filhos*/
@@ -143,6 +152,7 @@ form>select {
     justify-content: center;
     padding-top: 50px;
     background-color: #B5C3A6;
+    padding-bottom: 50px;
 
 }
 
@@ -156,16 +166,12 @@ form>select {
 }
 
 .cartao-cards {
-    /* background: #cc4d4d; */
     width: 200px;
     position: relative;
     display: block;
     text-align: center;
     height: auto;
     margin: auto;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 #nome {
@@ -192,7 +198,6 @@ form>select {
 }
 
 .lista-cards {
-    /*background-color: #d8e3ec;*/
     width: 290px;
     height: auto;
     padding: 15px;
@@ -203,12 +208,8 @@ form>select {
     align-items: center;
     /*alinha horizontalmente*/
     gap: 15px;
-    /*transition: 0.2s ease-in-out;*/
-    /*efeito suave de entrada e saída, só vai funcionar se eu colocar o hoover*/
     justify-content: center;
-    /* border: 2px solid #000000; */
     border-radius: 6px;
-    /* background-color: darksalmon; */
     align-self: self-start;
     box-shadow: 3px 3px 4px black;
 }
@@ -229,40 +230,18 @@ ul {
     padding-inline-end: 10px;
 }
 
-/* .cartao-cards .informacoes p {
-    padding: 5px;
-    text-transform: uppercase;
-    font-size: 17px;
-    background: #8FBC8F;
-} */
-
-/*.cartao-cards  {
-    width: 90px;
-    height: 90px;
-}*/
-
 .cartao-cards .sign {
     display: flex;
     gap: 15px;
 }
 
 .sign {
-    border: 10px red;
     padding: 8px;
     border-radius: 10px;
 }
 
-.sign-up {
-    background-color:#B5C3A6;
-    /* border: 2px solid #000000;
-    border-radius: 3px; */
-    font-size: 14px;
-}
-
+.sign-up,
 .sign-rev {
-    background-color: #df67ddfb;
-    /* border: 2px solid #000000;
-    border-radius: 3px; */
     font-size: 14px;
 }
 
@@ -302,4 +281,160 @@ details .sumario {
 
 details {
     width: 200px;
+}
+
+footer {
+    display: flex;
+    background-color: #8FBC8F;
+    position: fixed;
+    width: 100vw;
+    /* height: 40px; */
+    /* right: 0%; */
+    justify-content: center;
+    font-weight: bold;
+    padding-top: 5px;
+    bottom: 0%;
+    /*aumentei essa informação p ele ficar colado embaixo, mas parece que não funcionou*/
+    font-size: 0.8rem;
+}
+
+footer p a {
+    text-decoration: none;
+}
+
+
+
+/* ----  Responsividade ---- */
+
+
+@media (max-width: 1000px) {
+
+    #tituloT {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    #textoT {
+        text-align: justify;
+        padding-bottom: 2%;
+    }
+
+
+    .textoeinput {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #pesquisa-nome {
+        width: 122px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        /* padding: 3%; */
+        /* gap: 0.2rem; */
+        /* margin: 10px; */
+        /* right: 35%; */
+        /* font-weight: 600; */
+
+    }
+
+    label {
+        text-align: right;
+        flex-basis: 40%;
+        /*sugestã da Nury para quebrar os inputs em 2 colunas/linhas*/
+        padding-bottom: 1%;
+        /* padding: 1%; */
+    }
+
+    form>label>input {
+        /* padding: 10px; */
+        background-color: #8FBC8F;
+        border: none;
+    }
+
+    form>label>select {
+        padding: 10px;
+        background-color: #8FBC8F;
+        border: none;
+    }
+
+    footer p {
+        text-align: center;
+        font-size: 0.7rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    /*telas menores que 500px*/
+
+    /* .textoeinput {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    } */
+
+    #burguer {
+        padding-left: 10px;
+    }
+
+    #tituloT {
+        padding-left: 0;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        font-size: 2rem;
+        /*inclui hj 09/06 */
+    }
+
+    #textoT {
+        /*inclui hj 09/06 */
+        padding: 0 2% 2%;
+        font-size: 0.9rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        padding: 3%;
+        right: 0.5%;
+        font-size: smaller;
+        /* align-items: stretch; */
+    }
+
+    label {
+        font-weight: bold; /*o label estava muito apagado*/
+    }
+
+    form>label>input,
+    form>label>select {
+        /*inclui hj 09/06 - para fazer a fonte do select e do input conversarem com a fonte do texto*/
+        font-size: smaller;
+        font-family: "Poppins";
+        font-weight: lighter;
+        width: 120px;
+
+    }
+
+    .lista-cards {
+        width: 480px;
+    }
+
+    footer p {
+        font-size: 0.6rem;
+        text-align: center;
+    }
 }

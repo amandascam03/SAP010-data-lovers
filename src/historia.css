@@ -1,35 +1,16 @@
 * {
 	margin: 0;
 	padding: 0;
-
 }
 
 body {
-	/* display: grid;
-	grid-template-columns: auto auto auto;
-	grid-template-rows: repeat(3 auto);
-	border: 2px #000; */
-
-
-	/* background-image: url(imagens/cartasDireita.jpg);
-	background-size: cover;
-	background-repeat: no-repeat; */
 	font-family: 'Poppins', 'Roboto', sans-serif;
-
-	/* background-repeat: no-repeat;
-	background-size: 1028px 617px;
-	background-position:  */
 	margin: 0;
 	overflow-x: hidden;
-	overflow-y: hidden;
 }
 
-/* header {
-	z-index: 2;
-} */
-
 #tituloH {
-	padding-top: 4em;
+	padding-top: 2em;
 	padding-bottom: 2em;
 	font-weight: bolder;
 	font-size: xx-large;
@@ -47,44 +28,43 @@ h2 {
 p {
 	margin-bottom: 1em;
 	text-indent: 3em;
-	/* margin-left: 10px;*/
 }
 
 .textoH {
-	font-size: 14.5px;
+	/* font-size: 14.5px; */
+	font-size: 0.9rem;
 	font-weight: 800;
+	text-align: left;
+	padding: 0 0 1% 2%;
+	/*Aqui consegui a 'margem' do texto*/
 }
 
 .textoA {
-	font-size: 12px;
+	font-size: 0.9rem;
+	/*mudei a unidade de medida*/
 	font-weight: 800;
+	padding: 0 0 1% 2%;
 }
 
 .voltar {
+	font-size: 1rem;
 	text-decoration: none;
 	color: black;
-	/* padding-top: 1em; */
-	padding-left: 1em;
+
+	padding: 0.2rem 1rem;
+	/* padding-left: 1em;
 	padding-right: 1em;
+	padding-top: 0.2em; */
 	background-color: #8FBC8F;
 	display: inline-block;
+	/* margin-bottom: 10px; */
 }
 
 .main {
-
-	/* align-items: center;
-	justify-content: center; */
-	/* background-color: #E4E2E7; */
 	height: 100vh;
 	width: 100vw;
 	position: relative;
 	background-color: rgba(181, 195, 166, 0.6);
-	/* background-image: url(imagens/cartasDireitaEstreita.jpg);
-	height: 97.5vh;
-	width: 100vw;
-	background-size: cover;
-	background-repeat: no-repeat;
-	 */
 }
 
 .main::before {
@@ -96,31 +76,79 @@ p {
 	background-position: center;
 	z-index: -1;
 	opacity: 0.9;
-
-
 }
 
-/* ul {
-	background-color: blue;
-	margin: 0;
-	position: fixed;
-
-} */
-
-/* li a {
-	text-decoration: none;
-	background-color: aqua;
-} */
-
 main {
-	margin-left: 60px;
-	width: 500px;
+	/* margin-left: 60px; */
+	width: 100vw;
+	/*mudei conforme orientação da Nury*/
 	font-size: 13px;
 	z-index: 9;
 }
 
-/* 
-menu {
-	width: 100vw;
-	background-color: #b5c3a9ee;
-} */
+/* ----  Responsividade ---- */
+
+
+@media (max-width: 1000px) {
+
+	#tituloT {
+		text-align: center;
+	}
+
+	.textoH {
+		text-align: left;
+	}
+
+	.textoA {
+		text-align: left;
+	}
+
+	h2 {
+		padding-left: 0;
+		padding-bottom: 0.8rem;
+	}
+
+	.voltar {
+		font-size: 0.7rem;
+		font-weight: bold;
+	}
+
+
+}
+
+@media (max-width: 500px) {
+
+	#tituloH {
+		padding: 2em 0 1em 0.7rem;
+		padding-top: 2em;
+		padding-left: 1rem;
+		padding-bottom: 1em;
+		text-align: center;
+		font: size 1rem;
+		/*inclui hj 09/06 */
+	}
+
+	.textoH {
+		/*inclui hj 09/06 */
+		padding: 0 4%;
+		font-size: 0.7rem;
+
+
+	}
+
+	.tituloA {
+		padding-top: 1em;
+		/*inclui hj 09/06 */
+	}
+
+	.textoA {
+		/*inclui hj 09/06 */
+		padding: 0 4%;
+		font-size: 0.7rem;
+	}
+
+	footer p a {
+		font-size: 0.6rem;
+
+	}
+}

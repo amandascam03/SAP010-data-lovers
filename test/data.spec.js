@@ -87,12 +87,12 @@ describe("ordenaCartas", () => {
     ]);
   });
 
-  it ("teste da linha 34", () => {
-      expect(ordenaCartas(dados2, selecaoZ)).toEqual([
-        { name: "C"},
-        { name: "B"},
-        { name: "A"}
-      ]);
+  it("teste da linha 34", () => {
+    expect(ordenaCartas(dados2, selecaoZ)).toEqual([
+      { name: "C" },
+      { name: "B" },
+      { name: "A" }
+    ]);
   });
 
   it("ordenou `cartas Z-A`", () => {
@@ -102,6 +102,14 @@ describe("ordenaCartas", () => {
       { name: "Ana" }
     ]);
   });
+
+  it("teste da linha 28", () => {
+    expect(ordenaCartas(dados, selecaoZ)).toEqual([
+      { name: "Camila", value: 2, type: "minor" },
+      { name: "Ana", value: 1, type: "major" },
+      { name: "Amanda", value: 3, type: "major" }
+    ]);
+  })
 });
 
 describe("filtrarArcanos", () => {

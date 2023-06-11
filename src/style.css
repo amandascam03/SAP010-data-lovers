@@ -125,7 +125,6 @@ form>label>input {
     width: 80px;
 }
 
-
 form>label>select {
     background-color: #B5C3A6;
     height: 40px;
@@ -409,7 +408,7 @@ footer p a {
         justify-content: center;
         align-items: center;
         border: none;
-        padding: 3%;
+        padding: 3%; /* ajustar */
         right: 0.5%;
         font-size: smaller;
         /* align-items: stretch; */

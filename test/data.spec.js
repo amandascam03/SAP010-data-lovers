@@ -18,7 +18,6 @@ const selecaoA = "a-z";
 const selecaoZ = "z-a";
 const arcano = "major";
 const arcanoMinor = "minor";
-//const selecao = "Selecione";
 
 describe("filtrarNomes", () => {
   it("is a function", () => {

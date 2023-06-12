@@ -325,7 +325,7 @@ footer p a {
 
     label {
         text-align: right;
-        flex-basis: 50%;/*Usado para quebrar em 2 linhas o form*/
+        flex-basis: 46%;/*Usado para quebrar em 2 linhas o form*/
         padding-bottom: 1%;
     }
 

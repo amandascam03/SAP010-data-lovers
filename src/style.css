@@ -122,7 +122,7 @@ form>label>input {
 
 
 #pesquisa-numero{
-    width: 80px;
+    width: 100px;
 }
 
 form>label>select {
@@ -329,6 +329,10 @@ footer p a {
         width: 122px;
     }
 
+    #pesquisa-numero {
+        width: 122px;
+    }
+
     form {
         display: flex;
         flex-direction: row;
@@ -355,13 +359,13 @@ footer p a {
 
     form>label>input {
         /* padding: 10px; */
-        background-color: #8FBC8F;
+        background-color:  #B5C3A6;
         border: none;
     }
 
     form>label>select {
         padding: 10px;
-        background-color: #8FBC8F;
+        background-color:  #B5C3A6;
         border: none;
     }
 
@@ -408,7 +412,7 @@ footer p a {
         justify-content: center;
         align-items: center;
         border: none;
-        padding: 3%; /* ajustar */
+        /* padding: 3%; ajustar */
         right: 0.5%;
         font-size: smaller;
         /* align-items: stretch; */
@@ -418,14 +422,20 @@ footer p a {
         font-weight: bold; /*o label estava muito apagado*/
     }
 
-    form>label>input,
-    form>label>select {
+    form>label>input {
         /*inclui hj 09/06 - para fazer a fonte do select e do input conversarem com a fonte do texto*/
         font-size: smaller;
         font-family: "Poppins";
         font-weight: lighter;
         width: 120px;
+    }
 
+    
+    form>label>select {
+        font-size: smaller;
+        font-family: "Poppins";
+        font-weight: lighter;
+        width: 120px;
     }
 
     .lista-cards {

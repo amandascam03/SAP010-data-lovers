@@ -31,17 +31,14 @@ p {
 }
 
 .textoH {
-	/* font-size: 14.5px; */
 	font-size: 0.9rem;
 	font-weight: 800;
 	text-align: left;
 	padding: 0 0 1% 2%;
-	/*Aqui consegui a 'margem' do texto*/
 }
 
 .textoA {
 	font-size: 0.9rem;
-	/*mudei a unidade de medida*/
 	font-weight: 800;
 	padding: 0 1% 1% 2%;
 }
@@ -50,14 +47,9 @@ p {
 	font-size: 1rem;
 	text-decoration: none;
 	color: black;
-
 	padding: 0.2rem 1rem;
-	/* padding-left: 1em;
-	padding-right: 1em;
-	padding-top: 0.2em; */
 	background-color: #8FBC8F;
 	display: inline-block;
-	/* margin-bottom: 10px; */
 }
 
 .main {
@@ -79,9 +71,7 @@ p {
 }
 
 main {
-	/* margin-left: 60px; */
 	width: 100vw;
-	/*mudei conforme orientação da Nury*/
 	font-size: 13px;
 	z-index: 9;
 }
@@ -125,24 +115,18 @@ main {
 		padding-bottom: 1em;
 		text-align: center;
 		font: size 1rem;
-		/*inclui hj 09/06 */
 	}
 
 	.textoH {
-		/*inclui hj 09/06 */
 		padding: 0 4%;
 		font-size: 0.7rem;
-
-
 	}
 
 	.tituloA {
 		padding-top: 1em;
-		/*inclui hj 09/06 */
 	}
 
 	.textoA {
-		/*inclui hj 09/06 */
 		padding: 0 4%;
 		font-size: 0.7rem;
 	}

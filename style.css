@@ -16,9 +16,6 @@ header {
     /* foi usado para ficar da largura da tela */
     position: fixed;
     top: 0%;
-    /* right: 0%;
-    bottom: 93%;
-    padding-top: 10px; */
 }
 
 menu {
@@ -47,7 +44,6 @@ menu>ul>li>a {
     background: #8FBC8F;
     display: flex;
     cursor: pointer;
-    /* padding: 20px 0 10px 30px; */
     padding: 10px;
     position: relative;
 }
@@ -71,8 +67,6 @@ menu>ul>li>a {
 .textoeinput {
     display: flex;
     justify-content: space-between;
-    /* padding-right: 2%; coloquei para tirar a faixa branca que apareceu na lateral */
-
 }
 
 #tituloT {
@@ -82,7 +76,6 @@ menu>ul>li>a {
 }
 
 #textoT {
-    /* padding-left: 3em; */
     padding: 0 1% 1% 1%;
     text-indent: 2em;
     display: flex;
@@ -97,29 +90,22 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    /* width: 1rem; */
-    /* width: 180px; */
     position: relative;
-    /* right: 10%; */
     margin-bottom: 20px;
-
 }
 
 form>label>input {
-    /*Precisei colocar dessa forma para atingir o input*/
     border: none;
     background-color: #B5C3A6;
     height: 35px;
-    /* font-size: 16px; */
     font-size: 1rem;
     margin: 3%;
     /*separou os inputs, eles estavam colados*/
-    
-}
-#pesquisa-nome{
-    width: 120px;
 }
 
+#pesquisa-nome{
+    width: 123px;
+}
 
 #pesquisa-numero{
     width: 100px;
@@ -147,7 +133,6 @@ form>label>select {
     flex-wrap: wrap;
     /*essa propriedade colocamos no pai para conseguirmos mexer nos filhos*/
     gap: 30px;
-    /*essa propriedade colocamos no pai para conseguirmos mexer nos filhos*/
     justify-content: center;
     padding-top: 50px;
     background-color: #B5C3A6;
@@ -287,24 +272,19 @@ footer {
     background-color: #8FBC8F;
     position: fixed;
     width: 100vw;
-    /* height: 40px; */
-    /* right: 0%; */
     justify-content: center;
     font-weight: bold;
     padding-top: 5px;
     bottom: 0%;
-    /*aumentei essa informação p ele ficar colado embaixo, mas parece que não funcionou*/
     font-size: 0.8rem;
 }
 
 footer p a {
     text-decoration: none;
+    color: black;
 }
 
-
-
 /* ----  Responsividade ---- */
-
 
 @media (max-width: 1000px) {
 
@@ -341,24 +321,15 @@ footer p a {
         justify-content: center;
         align-items: center;
         border: none;
-        /* padding: 3%; */
-        /* gap: 0.2rem; */
-        /* margin: 10px; */
-        /* right: 35%; */
-        /* font-weight: 600; */
-
     }
 
     label {
         text-align: right;
-        flex-basis: 40%;
-        /*sugestã da Nury para quebrar os inputs em 2 colunas/linhas*/
+        flex-basis: 46%;/*Usado para quebrar em 2 linhas o form*/
         padding-bottom: 1%;
-        /* padding: 1%; */
     }
 
     form>label>input {
-        /* padding: 10px; */
         background-color:  #B5C3A6;
         border: none;
     }
@@ -378,14 +349,6 @@ footer p a {
 
 @media (max-width: 500px) {
 
-    /*telas menores que 500px*/
-
-    /* .textoeinput {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    } */
-
     #burguer {
         padding-left: 10px;
     }
@@ -395,11 +358,9 @@ footer p a {
         padding-top: 4rem;
         padding-bottom: 4rem;
         font-size: 2rem;
-        /*inclui hj 09/06 */
     }
 
     #textoT {
-        /*inclui hj 09/06 */
         padding: 0 2% 2%;
         font-size: 0.9rem;
     }
@@ -412,18 +373,16 @@ footer p a {
         justify-content: center;
         align-items: center;
         border: none;
-        /* padding: 3%; ajustar */
         right: 0.5%;
         font-size: smaller;
-        /* align-items: stretch; */
     }
 
     label {
-        font-weight: bold; /*o label estava muito apagado*/
+        font-weight: bold; 
     }
 
     form>label>input {
-        /*inclui hj 09/06 - para fazer a fonte do select e do input conversarem com a fonte do texto*/
+        /*para fazer a fonte do select e do input conversarem com a fonte do texto*/
         font-size: smaller;
         font-family: "Poppins";
         font-weight: lighter;

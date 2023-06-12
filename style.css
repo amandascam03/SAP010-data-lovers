@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #333333;
+}
+
+header {
+    z-index: 2;
+    width: 100vw;
+    /* foi usado para ficar da largura da tela */
+    position: fixed;
+    top: 0%;
+    /* right: 0%;
+    bottom: 93%;
+    padding-top: 10px; */
+}
+
+menu {
+    display: none;
+    /*deixa a lista do menu escondido*/
+
+}
+
+#menuLista {
+
+    background-color: rgba(143, 188, 143, 0.25);
+    margin: 0;
+    position: fixed;
+    font-weight: bold;
+    padding: 1em 0;
+    padding-left: 1em;
+}
+
+menu>ul>li>a {
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#burguer {
+    background: #8FBC8F;
+    display: flex;
+    cursor: pointer;
+    /* padding: 20px 0 10px 30px; */
+    padding: 10px;
+    position: relative;
+}
+
+.background {
+    background-color: rgba(181, 195, 166, 0.6);
+    position: relative;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(imagens/cartasEsquerdaMenor.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.textoeinput {
+    display: flex;
+    justify-content: space-between;
+    /* padding-right: 2%; coloquei para tirar a faixa branca que apareceu na lateral */
+
+}
+
+#tituloT {
+    padding-top: 3em;
+    padding-left: 3em;
+    font-size: 3em;
+}
+
+#textoT {
+    /* padding-left: 3em; */
+    padding: 0 1% 1% 1%;
+    text-indent: 2em;
+    display: flex;
+    position: relative;
+    padding-top: 3em;
+    font-weight: bold;
+    text-align: left;
+    width: 73vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    /* width: 1rem; */
+    /* width: 180px; */
+    position: relative;
+    /* right: 10%; */
+    margin-bottom: 20px;
+
+}
+
+form>label>input {
+    /*Precisei colocar dessa forma para atingir o input*/
+    border: none;
+    background-color: #B5C3A6;
+    height: 35px;
+    /* font-size: 16px; */
+    font-size: 1rem;
+    margin: 3%;
+    /*separou os inputs, eles estavam colados*/
+    
+}
+#pesquisa-nome{
+    width: 120px;
+}
+
+
+#pesquisa-numero{
+    width: 100px;
+}
+
+form>label>select {
+    background-color: #B5C3A6;
+    height: 40px;
+    border: none;
+    font-family: "Poppins";
+    font-size: 16px;
+    margin: 2%;
+}
+
+.calculo {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    padding-bottom: 5px;
+    text-decoration: underline;
+}
+
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    /*essa propriedade colocamos no pai para conseguirmos mexer nos filhos*/
+    gap: 30px;
+    /*essa propriedade colocamos no pai para conseguirmos mexer nos filhos*/
+    justify-content: center;
+    padding-top: 50px;
+    background-color: #B5C3A6;
+    padding-bottom: 50px;
+
+}
+
+.card-img {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 150px;
+    height: auto;
+    margin: auto;
+}
+
+.cartao-cards {
+    width: 200px;
+    position: relative;
+    display: block;
+    text-align: center;
+    height: auto;
+    margin: auto;
+}
+
+#nome {
+    margin: 1.5% 0;
+    display: block;
+    text-align: center;
+    align-items: center;
+
+}
+
+#valor {
+    margin: 0;
+    display: block;
+    text-align: center;
+    align-items: center;
+}
+
+#tipo {
+    margin: 1.5% 0;
+    display: block;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.lista-cards {
+    width: 290px;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    /*por padrão ele alinha em linhas*/
+    flex-direction: column;
+    /*aqui ele vai alinhar em colunas*/
+    align-items: center;
+    /*alinha horizontalmente*/
+    gap: 15px;
+    justify-content: center;
+    border-radius: 6px;
+    align-self: self-start;
+    box-shadow: 3px 3px 4px black;
+}
+
+ul li {
+    list-style: none;
+    padding: 0;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+}
+
+.cartao-cards .sign {
+    display: flex;
+    gap: 15px;
+}
+
+.sign {
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.sign-up,
+.sign-rev {
+    font-size: 14px;
+}
+
+.descricao {
+    max-height: 80px;
+    overflow-y: scroll;
+    font-size: 14px;
+    padding-right: 10px;
+    text-align: start;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+details>summary {
+    padding: 2px 6px;
+    width: 150px;
+    background-color: #8FBC8F;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 3px 3px 4px black;
+    cursor: pointer;
+    list-style: none;
+    height: 20px;
+    padding: 6px 6px;
+    line-height: 20px;
+}
+
+details .sumario {
+    border-radius: 0 10px 10px 10px;
+    background-color: #8FBC8F;
+    padding: 2px 6px;
+    margin: 0;
+    box-shadow: 3px 3px 4px black;
+}
+
+details {
+    width: 200px;
+}
+
+footer {
+    display: flex;
+    background-color: #8FBC8F;
+    position: fixed;
+    width: 100vw;
+    /* height: 40px; */
+    /* right: 0%; */
+    justify-content: center;
+    font-weight: bold;
+    padding-top: 5px;
+    bottom: 0%;
+    /*aumentei essa informação p ele ficar colado embaixo, mas parece que não funcionou*/
+    font-size: 0.8rem;
+}
+
+footer p a {
+    text-decoration: none;
+}
+
+
+
+/* ----  Responsividade ---- */
+
+
+@media (max-width: 1000px) {
+
+    #tituloT {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    #textoT {
+        text-align: justify;
+        padding-bottom: 2%;
+    }
+
+
+    .textoeinput {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #pesquisa-nome {
+        width: 122px;
+    }
+
+    #pesquisa-numero {
+        width: 122px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        /* padding: 3%; */
+        /* gap: 0.2rem; */
+        /* margin: 10px; */
+        /* right: 35%; */
+        /* font-weight: 600; */
+
+    }
+
+    label {
+        text-align: right;
+        flex-basis: 40%;
+        /*sugestã da Nury para quebrar os inputs em 2 colunas/linhas*/
+        padding-bottom: 1%;
+        /* padding: 1%; */
+    }
+
+    form>label>input {
+        /* padding: 10px; */
+        background-color:  #B5C3A6;
+        border: none;
+    }
+
+    form>label>select {
+        padding: 10px;
+        background-color:  #B5C3A6;
+        border: none;
+    }
+
+    footer p {
+        text-align: center;
+        font-size: 0.7rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    /*telas menores que 500px*/
+
+    /* .textoeinput {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    } */
+
+    #burguer {
+        padding-left: 10px;
+    }
+
+    #tituloT {
+        padding-left: 0;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        font-size: 2rem;
+        /*inclui hj 09/06 */
+    }
+
+    #textoT {
+        /*inclui hj 09/06 */
+        padding: 0 2% 2%;
+        font-size: 0.9rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        /* padding: 3%; ajustar */
+        right: 0.5%;
+        font-size: smaller;
+        /* align-items: stretch; */
+    }
+
+    label {
+        font-weight: bold; /*o label estava muito apagado*/
+    }
+
+    form>label>input {
+        /*inclui hj 09/06 - para fazer a fonte do select e do input conversarem com a fonte do texto*/
+        font-size: smaller;
+        font-family: "Poppins";
+        font-weight: lighter;
+        width: 120px;
+    }
+
+    
+    form>label>select {
+        font-size: smaller;
+        font-family: "Poppins";
+        font-weight: lighter;
+        width: 120px;
+    }
+
+    .lista-cards {
+        width: 480px;
+    }
+
+    footer p {
+        font-size: 0.6rem;
+        text-align: center;
+    }
+}

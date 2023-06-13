@@ -5,8 +5,7 @@
 
 * [1. Resumo do projeto](#1-resumo-do-projeto)
 * [2. Definição de produto](#2-definição-de-produto)
-* [3. Critérios mínimos de aceitação do
-  projeto](#3-critérios-mínimos-de-aceitação-do-projeto)
+* [3. Critérios mínimos de aceitação do projeto](#3-critérios-mínimos-de-aceitação-do-projeto)
 * [4. Considerações técnicas](#4-considerações-técnicas)
 * [5. Checklist](#5-checklist)
 

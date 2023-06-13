@@ -26,7 +26,7 @@ menu {
 
 #menuLista {
 
-    background-color: rgba(143, 188, 143, 0.25);
+    background-color: rgba(143, 188, 143, 0.6);
     margin: 0;
     position: fixed;
     font-weight: bold;
@@ -61,7 +61,7 @@ menu>ul>li>a {
     background-size: cover;
     background-position: center;
     z-index: -1;
-    opacity: 0.9;
+    opacity: 0.5;
 }
 
 .textoeinput {
@@ -96,23 +96,30 @@ form {
 
 form>label>input {
     border: none;
-    background-color: #B5C3A6;
+    background-color: rgba(181, 195, 166, 0.7);
     height: 35px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin: 3%;
     /*separou os inputs, eles estavam colados*/
 }
 
-#pesquisa-nome{
-    width: 123px;
+::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    padding-left: 4px;
 }
 
-#pesquisa-numero{
+#pesquisa-nome {
+    width: 123px;
+    padding: 4px;
+
+}
+
+#pesquisa-numero {
     width: 100px;
 }
 
 form>label>select {
-    background-color: #B5C3A6;
+    background-color: rgba(181, 195, 166, 0.7);
     height: 40px;
     border: none;
     font-family: "Poppins";
@@ -195,7 +202,7 @@ form>label>select {
     justify-content: center;
     border-radius: 6px;
     align-self: self-start;
-    box-shadow: 3px 3px 4px black;
+    box-shadow: 6px 6px 6px 3px;
 }
 
 ul li {
@@ -307,6 +314,7 @@ footer p a {
 
     #pesquisa-nome {
         width: 122px;
+
     }
 
     #pesquisa-numero {
@@ -325,18 +333,17 @@ footer p a {
 
     label {
         text-align: right;
-        flex-basis: 46%;/*Usado para quebrar em 2 linhas o form*/
+        flex-basis: 46%;
+        /*Usado para quebrar em 2 linhas o form*/
         padding-bottom: 1%;
     }
 
     form>label>input {
-        background-color:  #B5C3A6;
         border: none;
     }
 
     form>label>select {
         padding: 10px;
-        background-color:  #B5C3A6;
         border: none;
     }
 
@@ -348,6 +355,7 @@ footer p a {
 }
 
 @media (max-width: 500px) {
+    /*(max-width: 500px) and*/
 
     #burguer {
         padding-left: 10px;
@@ -378,18 +386,31 @@ footer p a {
     }
 
     label {
-        font-weight: bold; 
+        font-weight: bold;
     }
 
     form>label>input {
-        /*para fazer a fonte do select e do input conversarem com a fonte do texto*/
-        font-size: smaller;
+        /*para fazer a fonte do select e do input conversarem com a fonte do texto
+        font-size: smaller;*/
         font-family: "Poppins";
         font-weight: lighter;
         width: 120px;
+        font-size: 0.8rem;
+        text-align: center;
     }
 
-    
+    ::-webkit-input-placeholder {
+        padding-left: 4px;
+        font-size: 0.7rem;
+    }
+
+
+    #pesquisa-nome {
+        width: 122px;
+        padding-left: 6px;
+        text-align: center;
+    }
+
     form>label>select {
         font-size: smaller;
         font-family: "Poppins";

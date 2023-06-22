@@ -5,6 +5,7 @@ import {
   ordenaCartas,
 } from "./data.js";
 import data from "./data/tarot/tarot.js";
+import home from "./pages/home/index.js"
 
 const burguer = document.getElementById("burguer"); // pega o icone burguer pelo Id
 burguer.addEventListener("click", clickMenu);
@@ -25,6 +26,15 @@ const select = document.getElementById("ordem");
 const selectArcano = document.getElementById("arcanos");
 const calculoTelaMajor = document.getElementById("calculo");
 const calculoTelaMinor = document.getElementById("calculo2");
+
+// SPA
+
+const main = document.querySelector("#conteudo");
+
+window.addEventListener("load", () => {
+  main.appendChild(home());
+});
+
 
 function infosDosCardsTela(cards) {
   root.innerHTML = cards
@@ -66,8 +76,8 @@ function infosDosCardsTela(cards) {
     )
     .join("");
 
- 
-}
+
+};
 
 infosDosCardsTela(dadosTarot);
 

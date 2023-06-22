@@ -21,25 +21,20 @@ function clickMenu() {
 const pesquisarNome = document.getElementById("pesquisa-nome"); // pega o input de pesquisa pela id
 const pesquisarNumero = document.getElementById("pesquisa-numero");
 const dadosTarot = data.cards;
-const root = document.getElementById("info-cards");
 const select = document.getElementById("ordem");
 const selectArcano = document.getElementById("arcanos");
 const calculoTelaMajor = document.getElementById("calculo");
 const calculoTelaMinor = document.getElementById("calculo2");
 
-// SPA
 
-const main = document.querySelector("#conteudo");
-
-window.addEventListener("load", () => {
-  main.appendChild(home());
-});
 
 
 function infosDosCardsTela(cards) {
-  root.innerHTML = cards
-    .map(
-      (card) => `
+  const root = document.getElementById("info-cards");
+  if (root) {
+    root.innerHTML = cards
+      .map(
+        (card) => `
       <div class="lista-cards">
         <ul>
           <li class="cartao-cards">
@@ -73,14 +68,20 @@ function infosDosCardsTela(cards) {
         </ul>
       </div>
     `
-    )
-    .join("");
-
+      )
+      .join("");
+  }
 
 };
 
-infosDosCardsTela(dadosTarot);
+// SPA
 
+const main = document.querySelector("#conteudo");
+
+window.addEventListener("load", () => {
+  main.appendChild(home());
+  infosDosCardsTela(dadosTarot);
+})
 
 pesquisarNome.addEventListener("input", (evento) => {
   // adiciona um evento quando o input é acionado
@@ -89,6 +90,9 @@ pesquisarNome.addEventListener("input", (evento) => {
   infosDosCardsTela(filtrarCartas); // chama a função infoDosCardsTela com o parametro que foi atribuído na variavel filtrarCartas
 });
 
+// window.addEventListener("DOMContentLoaded", () => {
+//   infosDosCardsTela(dadosTarot);
+// })
 
 pesquisarNumero.addEventListener("input", (evento) => {
   const numero = evento.target.value;
